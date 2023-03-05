@@ -1,0 +1,193 @@
+<script>
+    var a=Number(window.prompt("enter number 1: "));var b=Number(window.prompt("enter number 2: "));
+    var c=Number(window.prompt("enter number 3: "));var d=Number(window.prompt("enter number 4: "));
+    var e=Number(window.prompt("enter number 5: "));var f=Number(window.prompt("enter number 6: "));
+    var g=Number(window.prompt("enter number 7: "));var h=Number(window.prompt("enter number 8: "));
+    var i=Number(window.prompt("enter number 9: "));var j=Number(window.prompt("enter number 10: "));
+    var k=Number(window.prompt("enter number 11: "));var l=Number(window.prompt("enter number 12: "));
+    var m=Number(window.prompt("enter number 13: "));var n=Number(window.prompt("enter number 14: "));
+    var o=Number(window.prompt("enter number 15: "));var p=Number(window.prompt("enter number 16: "));
+    var q=Number(window.prompt("enter number 17: "));var r=Number(window.prompt("enter number 18: "));
+    var s=Number(window.prompt("enter number 19: "));var t=Number(window.prompt("enter number 20: "));
+    var u=Number(window.prompt("enter number 21: "));var v=Number(window.prompt("enter number 22: "));
+    var w=Number(window.prompt("enter number 23: "));var x=Number(window.prompt("enter number 24: "));
+    var y=Number(window.prompt("enter number 25: "));
+    var z=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y];
+    let a1=0;let a2=0;let a3=0;let a4=0;let a5=0;let a6=0;let a7=0;let a8=0;let a9=0;let a10=0;
+    for(let a11 of z) {
+        if(a11 >= 1 && a11 <= 5) {
+            a1=a1+1;
+        }else if(a11 >= 6 && a11 <= 10) {
+            a2=a2+1;
+        }else if(a11 >= 11 && a11 <= 15) {
+            a3=a3+1;
+        }else if(a11 >= 16 && a11 <= 20) {
+            a4=a4+1;
+        }else if(a11 >= 21 && a11 <= 25) {
+            a5=a5+1;
+        }else if(a11 >= 26 && a11 <= 30) {
+            a6=a6+1;
+        }else if(a11 >= 31 && a11 <= 35) {
+            a7=a7+1;
+        }else if(a11 >= 36 && a11 <= 40) {
+            a8=a8+1;
+        }else if(a11 >= 41 && a11 <= 45) {
+            a9=a9+1;
+        }else if(a11 >= 46 && a11 <= 50) {
+            a10=a10+1;
+        }
+    }
+    var a14=a1+a2+a3+a4+a5+a6+a7+a8+a9+a10;
+    var a13=Math.max(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10);
+    
+    let b1=(1+5)/2;
+    let b2=(6+10)/2;
+    let b3=(11+15)/2;
+    let b4=(16+20)/2;
+    let b5=(21+25)/2;
+    let b6=(26+30)/2;
+    let b7=(31+35)/2;
+    let b8=(36+40)/2;
+    let b9=(41+45)/2;
+    let b10=(46+50)/2;
+    
+    let c1=a1*b1;
+    let c2=a2*b2;
+    let c3=a3*b3;
+    let c4=a4*b4;
+    let c5=a5*b5;
+    let c6=a6*b6;
+    let c7=a7*b7;
+    let c8=a8*b8;
+    let c9=a9*b9;
+    let c10=a10*b10;
+
+    var c11=c1+c2+c3+c4+c5+c6+c7+c8+c9+c10;
+
+    var meanOfSet=(c11)/(a14);
+
+    let d1=a1*b1*b1;
+    let d2=a2*b2*b2;
+    let d3=a3*b3*b3;
+    let d4=a4*b4*b4;
+    let d5=a5*b5*b5;
+    let d6=a6*b6*b6;
+    let d7=a7*b7*b7;
+    let d8=a8*b8*b8;
+    let d9=a9*b9*b9;
+    let d10=a10*b10*b10;
+
+    var d11=d1+d2+d3+d4+d5+d6+d7+d8+d9+d10;
+    var fxs=(d11)/(a14);
+    var fxw=(c11)/(a14);
+    var vari=(fxw)*(fxw);
+    var variance=(fxs)-(vari);
+    var stdev=(variance)**(1/2);
+
+    document.write("<br>");
+    document.write("Computing the mode, median, mean, variance and standard deviation of a set of 25 values (the maximum value in the set can be 50 and the minimum value 1)"+"<br>");
+    document.write("<br>"+"<br>"+"<br>"+"<br>");
+    document.write("class limit______________________"+"frequency"+"<br>"+"<br>");
+    document.write("01- 05_____________________________"+a1+"<br><br>"+"06- 10_____________________________"+a2+"<br><br>");
+    document.write("11- 15_____________________________"+a3+"<br><br>"+"16- 20_____________________________"+a4+"<br><br>");
+    document.write("21- 25_____________________________"+a5+"<br><br>"+"26- 30_____________________________"+a6+"<br><br>");
+    document.write("31- 35_____________________________"+a7+"<br><br>"+"36- 40_____________________________"+a8+"<br><br>");
+    document.write("41- 45_____________________________"+a9+"<br><br>"+"46- 50_____________________________"+a10+"<br><br>");
+    document.write("<br><br><br>");
+    if(a13 == a1) {
+        document.write("1)From the mode formular, mode cannot be calculated since there is no frequency that comes before the modal class (1-5)"+"<br>");
+    }else if(a13 == a2) {
+        var x1=5*(a2-a1)
+        var y1=(2*a2)-a1-a3
+        var z1=5.5+((x1)/(y1))
+        document.write("1)The mode is"+"  "+z1+"<br>");
+    }else if(a13 == a3) {
+        var x2=5*(a3-a2)
+        var y2=(2*a3)-a2-a4
+        var z2=10.5+((x2)/(y2))
+        document.write("1)The mode is"+"  "+z2+"<br>");
+    }else if(a13 == a4) {
+        var x3=5*(a4-a3)
+        var y3=(2*a4)-a3-a5
+        var z3=15.5+((x3)/(y3))
+        document.write("1)The mode is"+"  "+z3+"<br>");
+    }else if(a13 == a5) {
+        var x4=5*(a5-a4)
+        var y4=(2*a5)-a4-a6
+        var z4=20.5+((x4)/(y4))
+        document.write("1)The mode is"+"  "+z4+"<br>");
+    }else if(a13 == a6) {
+        var x5=5*(a6-a5)
+        var y5=(2*a6)-a5-a7
+        var z5=25.5+((x5)/(y5))
+        document.write("1)The mode is"+"  "+z5+"<br>");
+    }else if(a13 == a7) {
+        var x6=5*(a7=a6)
+        var y6=(2*a7)-a6-a8
+        var z6=30.5+((x6)/(y6))
+        document.write("1)The mode is"+"  "+z6+"<br>");
+    }else if(a13 == a8) {
+        var x7=5*(a8-a7)
+        var y7=(2*a8)-a7-a9
+        var z7=35.5+(x7/y7)
+        document.write("1)The mode is"+"   "+z7+"<br>");
+    }else if(a13 == a9) {
+        var x8=5*(a9-a8)
+        var y8=(2*a9)-a8-a10
+        var z8=40.5+((x8)/(y8))
+        document.write("1)The mode is"+"  "+z8+"<br>");
+    }else {
+        document.write("1)From the mode formular, mode cannot be calculated since there is no frequency that comes after the modal class (46-50)"+"<br>");
+    }
+    document.write("<br>");
+
+    let t1=a1+a2;
+    let t2=t1+a3;
+    let t3=t2+a4;
+    let t4=t3+a5;
+    let t5=t4+a6;
+    let t6=t5+a7;
+    let t7=t6+a8;
+    let t8=t7+a9;
+    let t9=t8+a10;
+    let t10=(t9)/2;
+
+    if(t10 == a1) {
+        document.write("2)From the median formular, median cannot be calculated since there is no cumulative frequency that comes before the median class (1-5)"+"<br>");
+    }else if(t10 > a1 && t10 <= t1){
+        u2=5.5+((5/a2)*(t10-a1))
+        document.write("2)The median is"+"  "+u2+"<br>");
+    }else if(t10 > t1 && t10 <= t2) {
+        u3=10.5+((5/a3)*(t10-t1))
+        document.write("2)The median is"+"  "+u3+"<br>");
+    }else if(t10 > t2 && t10 <= t3) {
+        u4=15.5+((5/a4)*(t10-t2))
+        document.write("2)The median is"+"  "+u4+"<br>");
+    }else if(t10 > t3 && t10 <= t4) {
+        u5=20.5+((5/a5)*(t10-t3))
+        document.write("2)The median is"+"  "+u5+"<br>");
+    }else if(t10 > t4 && t10 <= t5) {
+        u6=25.5+((5/a6)*(t10-t4))
+        document.write("2)The median is"+"  "+u6+"<br>");
+    }else if(t10 > t5 && t10 <= t6) {
+        u7=30.5+((5/a7)*(t10-t5))
+        document.write("2)The median is"+"  "+u7+"<br>");
+    }else if(t10 > t6 && t10 <= t7) {
+        u8=35.5+((5/a8)*(t10-t6))
+        document.write("2)The median is"+"  "+u8+"<br>");
+    }else if(t10 > t7 && t10 <= t8) {
+        u9=40.5+((5/a9)*(t10-t7))
+        document.write("2)The median is"+"  "+u9+"<br>");
+    }else if(t10 > t8 && t10 <= t9) {
+        u10=45.5+((5/a10)*(t10-t8))
+        document.write("2)The median is"+"  "+u10+"<br>");
+    }else {
+        document.write("2)The data doesn't have a median"+"<br>");
+    }
+    document.write("<br>");
+    document.write("3)The mean is"+"  "+meanOfSet+"<br>");
+    document.write("<br>");
+    document.write("4)The variance is"+"  "+variance+"<br>");
+    document.write("<br>");
+    document.write("5)The standard deviation is"+"  "+stdev+"<br>");
+</script>
