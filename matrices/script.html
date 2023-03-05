@@ -1,0 +1,35 @@
+<script>
+    var a=window.prompt("enter first number in row 1");var b=window.prompt("enter second number in row 1");
+    var c=window.prompt("enter third number in row 1");var d=window.prompt("enter first number in row 2");
+    var e=window.prompt("enter second number in row 2");var f=window.prompt("enter third number in row 2");
+    var g=window.prompt("enter first number in row 3");var h=window.prompt("enter second number in row 3");
+    var i=window.prompt("enter third number in row 3");
+   
+    document.write("<br>"+"<br>")
+    document.write("Computing the transpose, determinant and inverse of a 3 by 3 matrix"+"<br>"+"<br>"+"<br>"+"<br>"+"<br>")
+    document.write("The transpose of the matrix is"+"<br>"+"<br>");
+    document.write("["+a+","+d+","+g+"]"+"<br>")
+    document.write("["+b+","+e+","+h+"]"+"<br>")
+    document.write("["+c+","+f+","+i+"]")
+    document.write("<br>"+"<br>"+"<br>")
+    var a2=(a*e*i)+(b*f*g)+(c*d*h)
+    var b2=(a*f*h)+(b*d*i)+(c*e*g)
+    var c2=a2-b2
+    document.write("The determinant of the matrix is, "+" "+c2)
+    document.write("<br>"+"<br>"+"<br>"+"<br>")
+    var [a3,b3,c3]=[(e*i)-(h*f),-((d*i)-(g*f)),(d*h)-(g*e)]
+    var [d3,e3,f3]=[-((b*i)-(h*c)),(a*i)-(g*c),-((a*h)-(g*b))]
+    var [g3,h3,i3]=[(b*f)-(e*c),-((a*f)-(d*c)),(a*e)-(d*b)]
+    var adjoint=[
+        [a3,d3,g3],
+        [b3,e3,h3],
+        [c3,f3,i3]
+    ]
+    var [a1,b1,c1]=[1/c2*a3,1/c2*d3,1/c2*g3]
+    var [d1,e1,f1]=[1/c2*b3,1/c2*e3,1/c2*h3]
+    var [g1,h1,i1]=[1/c2*c3,1/c2*f3,1/c2*i3]
+    document.write("The inverse of the matrix is"+"<br>"+"<br>");
+    document.write("["+a1+","+b1+","+c1+"]"+"<br>")
+    document.write("["+d1+","+e1+","+f1+"]"+"<br>")
+    document.write("["+g1+","+h1+","+i1+"]")
+</script>
